@@ -14,6 +14,6 @@ post '/' do
     break
   end
 
-  hc['Dev Relations'].send('Stacky', "New Stack Overflow question <a href='#{question}'>#{question}</a>")
+  hc['Dev Relations'].send('Stacky', "New Stack Overflow question <a href='#{question}'>#{question}</a>") unless question.nil?
   200
 end
