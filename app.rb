@@ -14,6 +14,11 @@ post '/' do
     break
   end
 
-  hc['Dev Relations'].send('Stacky', "New Stack Overflow question <a href='#{question}'>#{question}</a>") unless question.nil?
+  unless question.nil?
+    ENV['HIPCHAT_ROOMS'].split(',').each do |r|
+      hc[r].send('Stacky', "New Stack Overflow question <a href='#{question}'>#{question}</a>")
+    end
+  end
+
   200
 end
