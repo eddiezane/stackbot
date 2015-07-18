@@ -1,0 +1,16 @@
+{
+  "name": "StackBot",
+  "description": "A small bot that posts new Stack Overflow questions into HipChat",
+  "repository": "https://github.com/eddiezane/stackbot",
+  "keywords": ["stack overflow"],
+  "env": {
+    "HIPCHAT_ROOMS": {
+      "description": "A comma separated string of HipChat room names or ID's. e.g. 'Community,Support Room'",
+      "required": true
+    },
+    "HIPCHAT_TOKEN": {
+      "description": "A HipChat v2 API Token",
+      "required": true
+    }
+  }
+}
