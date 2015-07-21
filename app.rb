@@ -14,7 +14,7 @@ post '/' do
     when CONFIRMATION
       post_message("StackBot confirmation <a href='#{link.scan(CONFIRMATION)[0]}'>link</a>")
     when QUESTION
-      post_message("New Stack Overflow question <a href='#{question}'>#{question}</a>")
+      post_message("New Stack Overflow question <a href='#{link}'>#{link}</a>")
     end
   end
 
