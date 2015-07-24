@@ -28,5 +28,5 @@ def post_message(message)
 end
 
 def hc
-  @hc ||= HipChat::Client.new(ENV['HIPCHAT_TOKEN'], api_version: 'v2')
+  @hc ||= HipChat::Client.new(ENV['HIPCHAT_TOKEN'], api_version: ENV['HIPCHAT_API_VERSION'])
 end
